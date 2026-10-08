@@ -12,12 +12,10 @@
         <title>
             Bean Botique (Coffee Selection)
         </title>
-        <link rel="stylesheet" href="7-Bean Botique stylesheet.css">
+        <link rel="stylesheet" href="7-Bean-Botique-stylesheet.css">
+        <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 
-        <!-- first plugin-->
 
-        <link rel="stylesheet"href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     </head>
     <body>
         <header>
@@ -25,24 +23,31 @@
             <!--Contains a greeting slide show-->
 
             <div id="greetings">
-                <h3>Welcome to the Coffee Selection </h3>
-                <marquee><p><h5>Discover the finest Coffee Selection, Brewing equipment, and Exclusive workshops and events. Explore our Shopping Cart and Subscription Plan for a Better Coffee Experience.</h5></p></marquee>
+                <div id="greetings-text">
+                    <h1>Coffee Selection!</h1>
+                </div>
+
+                <div id="moving-text">
+                    Discover our different types of coffee     
+                </div>
+                
+                
             </div>
         
             <!--navigation bar-->
 
             <nav>
-                <a href="1-home_page (2).html">Home</a>    
+                <a href="index.html.html">Home</a>    
                 <a href="brewing_equipment.html">Brewing Equipment</a>        
                 <a href="Workshop_events.html">Workshop and events</a>       
-                <a href="Shoping_cart.html">Shoping Cart</a>           
+                <a href="Shoping_cart.html">Shopping Cart</a>           
                 <a href="Subscriptions.html">Subscription</a>  <br>
             </nav>
         </header>
 
         <!--page introduction-->
 
-        <section id="introduction">
+        <section id="introduction" data-aos="fade-up">
             <h2>About Our Coffee Selection</h2>
             <p>Welcome to Bean Botique, your local coffee shop! We are passionate about providing the highest quality coffee beans and brewing equipment to satisfy your taste buds.</p>
         </section>
@@ -51,44 +56,60 @@
 
         <section id="equipment-items">
 
-            <div class="equipment">  
-                <h3>Coffee selection</h3>
-                <p>Enjoy different type of tasty coffee from our various types of coffee that u can select from. </p>  
-                <img src="screen 10 .jpg">
+            <div class="equipment" data-aos="fade-up">
+                <h3>House Blend</h3>
+                <p>A smooth everyday coffee with a rich, balanced flavor.</p>
+                <img src="screen-10.jpg" alt="House Blend coffee">
+                <p class="product-price">$12.00 / bag</p>
+                <button class="cart-button" type="button" data-cart-add data-product-id="house-blend" data-product-name="House Blend" data-product-price="12.00">Add to cart</button>
             </div>
 
-            <div class="equipment">  
-                <h3>Coffee selection</h3>
-                <p>Enjoy different type of tasty coffee from our various types of coffee that u can select from. </p>  
-                <img src="screen 11.jpg">
+            <div class="equipment" data-aos="fade-up" data-aos-delay="100">
+                <h3>Espresso Roast</h3>
+                <p>A full-bodied roast made for rich, velvety espresso.</p>
+                <img src="screen-11.jpg" alt="Espresso Roast coffee">
+                <p class="product-price">$14.00 / bag</p>
+                <button class="cart-button" type="button" data-cart-add data-product-id="espresso-roast" data-product-name="Espresso Roast" data-product-price="14.00">Add to cart</button>
             </div>
 
-            <div class="equipment">  
-                <h3>Coffee selection</h3>
-                <p>Enjoy different type of tasty coffee from our various types of coffee that u can select from. </p>  
-                <img src="screen 12.jpg">
+            <div class="equipment" data-aos="fade-up" data-aos-delay="200">
+                <h3>Medium Roast</h3>
+                <p>A naturally sweet coffee with a smooth, mellow finish.</p>
+                <img src="screen-12.jpg" alt="Medium Roast coffee">
+                <p class="product-price">$13.00 / bag</p>
+                <button class="cart-button" type="button" data-cart-add data-product-id="medium-roast" data-product-name="Medium Roast" data-product-price="13.00">Add to cart</button>
             </div>
 
-               <div class="equipment">  
-                <h3>Coffee selection</h3>
-                <p>Enjoy different type of tasty coffee from our various types of coffee that u can select from. </p>  
-                <img src="screen 7.jpg">
+            <div class="equipment" data-aos="fade-up">
+                <h3>Dark Roast</h3>
+                <p>A bold, deep roast with notes of chocolate and spice.</p>
+                <img src="screen-7.jpg" alt="Dark Roast coffee">
+                <p class="product-price">$13.00 / bag</p>
+                <button class="cart-button" type="button" data-cart-add data-product-id="dark-roast" data-product-name="Dark Roast" data-product-price="13.00">Add to cart</button>
             </div>
 
-               <div class="equipment">  
-                <h3>Coffee selection</h3>
-                <p>Enjoy different type of tasty coffee from our various types of coffee that u can select from. </p>  
-                <img src="screen 14.jpg">
+            <div class="equipment" data-aos="fade-up" data-aos-delay="100">
+                <h3>Single-Origin Coffee</h3>
+                <p>A bright, aromatic coffee sourced from a single region.</p>
+                <img src="screen-14.jpg" alt="Single-origin coffee">
+                <p class="product-price">$16.00 / bag</p>
+                <button class="cart-button" type="button" data-cart-add data-product-id="single-origin" data-product-name="Single-Origin Coffee" data-product-price="16.00">Add to cart</button>
             </div>
 
-               <div class="equipment">  
-                <h3>Coffee selection</h3>
-                <p>Enjoy different type of tasty coffee from our various types of coffee that u can select from. </p>  
-                <img src="screen 16.jpg">
+            <div class="equipment" data-aos="fade-up" data-aos-delay="200">
+                <h3>Decaf Blend</h3>
+                <p>A balanced, flavorful cup with the caffeine removed.</p>
+                <img src="screen-16.jpg" alt="Decaf coffee">
+                <p class="product-price">$14.00 / bag</p>
+                <button class="cart-button" type="button" data-cart-add data-product-id="decaf-blend" data-product-name="Decaf Blend" data-product-price="14.00">Add to cart</button>
             </div>            
-        </section> 
+        </section>
+        <p class="cart-feedback" data-cart-feedback role="status" aria-live="polite"></p>
         <footer>
             <p>&copy; 2026 Bean Botique</p>
         </footer>
+        <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+        <script src="site-animations.js"></script>
+        <script src="cart.js"></script>
     </body>
 </html>

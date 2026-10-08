@@ -15,7 +15,10 @@
 
         <!--css document-->
 
-        <link rel="stylesheet" href="7-Bean Botique stylesheet.css"> 
+        <link rel="stylesheet" href="7-Bean-Botique-stylesheet.css"> 
+        <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+        
+      
     </head>
     <body>
 
@@ -26,24 +29,29 @@
             <!--Contains a greeting slide show-->
 
             <div id="greetings">
-                <h3>Welcome to Bean Botique Brewing Equipment Site</h3>
-                <marquee><p><h5>Discover the finest Coffee Selection, Brewing equipment, and Exclusive workshops and events. Explore our Shopping Cart and Subscription Plan for a Better Coffee Experience.</h5></p></marquee>
+                <div id="greetings-text">
+                    <h1>Brewing Equipment!</h1>
+                </div>
+
+                <div id="moving-text">
+                    Discover our different types of coffee     
+               </div>
             </div>
             
             <!--navigation bar-->
 
             <nav> 
-                <a href="1-home_page (2).html">Home page</a>           
+                <a href="index.html.html">Home page</a>           
                 <a href="2-Coffee_selection(2).html">Coffee selection page </a>            
                 <a href="Workshop_events.html">Workshop and events page</a>            
-                <a href="Shoping_cart.html">Shoping Cart page</a>            
+                <a href="Shoping_cart.html">Shopping Cart page</a>            
                 <a href="Subscriptions.html">Subscription page</a>
             </nav>
       </header>
 
       <!--page title section-->
 
-      <section id="introduction">
+      <section id="introduction" data-aos="fade-up">
             <h2>Brewing Equipment</h2>
             <p>Discover our wide range of high-quality brewing equipment for coffee lovers.</p>
       </section>
@@ -54,38 +62,44 @@
 
             <!--single image-->
 
-            <div class="equipment">
+            <div class="equipment" data-aos="fade-up">
                 <h3>Espresso Machine</h3>
                 <p>Experience the art of espresso making with our premium espresso machines.</p>
 
-                <img id="equipment-img" src="How To Make Espresso At Home - Batch Coffee Club.jpg" alt="Brewing Equipment">
+                <img class="equipment-img" src="How-To-Make-Espresso-At-Home-Batch-Coffee-Club.jpg" alt="Espresso Machine">
 
                 <h3>Usage Tip</h3>
                 <p>For the best results, use freshly roasted beans and grind them just before brewing.</p>
+                <p class="product-price">$129.00</p>
+                <button class="cart-button" type="button" data-cart-add data-product-id="espresso-machine" data-product-name="Espresso Machine" data-product-price="129.00">Add to cart</button>
             </div>
 
             <!--single-->
 
-            <div class="equipment">
+            <div class="equipment" data-aos="fade-up" data-aos-delay="100">
                 <h3>Cold Brew Maker</h3>
                 <p>Enjoy smooth and refreshing cold brew coffee with our easy-to-use cold brew makers.</p>
 
-                <img id="equipment-img" src="Your Guide For Choosing (and Brewing!) the Perfect Cup of Coffee.jpg" alt="Brewing Equipment">
+                <img class="equipment-img" src="Your-Guide-For-Choosing-(and-Brewing!)-the-Perfect-Cup-of-Coffee.jpg" alt="Cold Brew Maker">
 
                 <h3>Usage Tip</h3>
                 <p>Steep the coffee grounds in cold water for 12-24 hours for optimal flavor extraction.</p>
+                <p class="product-price">$34.00</p>
+                <button class="cart-button" type="button" data-cart-add data-product-id="cold-brew-maker" data-product-name="Cold Brew Maker" data-product-price="34.00">Add to cart</button>
             </div>  
 
             <!--single image-->
 
-            <div class="equipment">
+            <div class="equipment" data-aos="fade-up" data-aos-delay="200">
                 <h3>Coffee Grinder</h3>
                 <p>Grind your coffee beans to the perfect consistency with our high-quality coffee grinders.</p>
 
-                <img id="equipment-img" src="screen 15.jpg" alt="Coffee Grinder">
+                <img class="equipment-img" src="screen-15.jpg" alt="Coffee Grinder">
 
                 <h3>Usage Tip</h3>
                 <p>Grind your coffee beans to the perfect consistency with our high-quality coffee grinders.</p>
+                <p class="product-price">$49.00</p>
+                <button class="cart-button" type="button" data-cart-add data-product-id="coffee-grinder" data-product-name="Coffee Grinder" data-product-price="49.00">Add to cart</button>
             </div>
         </section>
 
@@ -95,6 +109,9 @@
             <p>&copy; 2026 Bean Botique, All rights reserved.</p>
         </footer>
 
+        <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+        <script src="site-animations.js"></script>
+        <script src="cart.js"></script>
     </body>
 
 </html>

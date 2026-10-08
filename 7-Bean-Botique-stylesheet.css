@@ -1,0 +1,628 @@
+/* general settings*/
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+/*body of the page*/
+body{
+   font-family: Arial, sans-serif;
+   line-height: 1.6;
+   background-color: #d6a15d;
+   color: white;
+}
+/*header of the page*/
+header{
+    background-color:#4b2e20;
+    color: white;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    position: relative;
+    border-radius: 10px;
+}
+/* footer of the page */
+footer{
+    color: white;
+    background: #4b2e20;
+    padding: 20px;
+    display: block;
+    border:solid #a58561;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/*Greetings text*/
+
+#greetings h3{
+    font-size:15px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+#greetings-text{
+    font-size: 20px       
+
+}
+
+/*navigation bar*/
+
+nav{
+   display: flex;
+   gap: 10px;
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px ;
+    border-radius: 1px;
+    transition:0.3s ease;
+}
+
+/* hover effect */
+
+nav a:hover,
+nav a:focus-visible,
+nav a:active {
+    background-color:#d6a15d;
+    border-radius: 10px;
+}
+
+/*Introduction box or pad*/
+
+#introduction{
+    margin:30px;
+
+    background:  #4b2e2071;
+    padding: 20px;
+    color: white;
+    border: solid #a58561;
+    border-radius: 10px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/*Introduction text*/
+
+#introduction h2{
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+/*general images*/
+
+img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: 0.3s ease;
+}
+
+/*Image hover effect*/
+
+img:hover,
+img:active{
+    transform: translateY(-8px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4); 
+}
+
+/*this is mainly for the brewing equipment*/
+/*the space for the items*/
+
+#equipment-items{
+    margin:30px auto;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    background:  #4b2e2096;
+    border-radius: 10px;
+}
+
+/*the equipment itself*/
+
+.equipment{
+  background-color: #29202a;
+  color: white;
+  margin: 20px;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
+  border-radius: 20px;
+}
+
+/*the equipment hover effect*/
+
+.equipment:hover,
+.equipment:active{
+    transform: translateY(-8px);
+    background:  #4b2e2096; 
+}
+
+/*The equipment image*/
+
+.equipment img{
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+/*prices in the equipment boxes*/
+
+.product-price{
+    margin: 12px 0;
+    font-weight: bold;
+}
+
+/*The cart button for the shopping cart*/
+
+.cart-button{
+    padding: 10px 16px;
+    border: 2px solid #d6a15d;
+    border-radius: 8px;
+    background: #d6a15d;
+    color: #29202a;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+/*The carts button hover effect*/
+
+.cart-button:hover{
+    background: #e6b875;
+    transform: translateY(-2px);
+}
+
+/*Mainly for the cart scalability*/
+
+.cart-button:focus-visible,
+.cart-quantity:focus-visible{
+    outline: 3px solid white;
+    outline-offset: 3px;
+}
+
+/*This is for the message that shows on the cart*/
+
+.cart-feedback{
+    min-height: 1.6em;
+    margin: 0 30px 20px;
+    text-align: center;
+}
+
+/*Shopping cart styling*/
+
+#shopping-cart{
+    margin: 30px;
+    padding: 24px;
+    border: solid #a58561;
+    border-radius: 10px;
+    background: #4b2e2071;
+    color: white;
+}
+
+/*shopping cart text*/
+
+#shopping-cart h2{
+    margin-bottom: 12px;
+    font-size: 28px;
+}
+
+
+
+.cart-status{
+    margin-bottom: 12px;
+}
+.cart-table-wrapper{
+    overflow-x: auto;
+}
+.cart-table{
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+.cart-table th,
+.cart-table td{
+    padding: 12px;
+    border-bottom: 1px solid #a58561;
+}
+.cart-table th{
+    background: #4b2e20;
+}
+.cart-quantity{
+    width: 76px;
+    min-height: 40px;
+    padding: 6px;
+    border: 2px solid #a58561;
+    border-radius: 6px;
+    font: inherit;
+}
+.cart-remove-button{
+    padding: 6px 10px;
+}
+.cart-summary{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+.cart-summary p{
+    font-size: 20px;
+}
+.cart-note{
+    margin-top: 12px;
+    text-align: right;
+    font-size: 14px;
+}
+.visually-hidden{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    clip-path: inset(50%);
+}
+.offers-panel,
+.plans-section,
+.subscriber-benefits{
+    margin: 30px;
+    padding: 28px;
+    border: solid #a58561;
+    border-radius: 10px;
+    background: #4b2e2071;
+}
+.offers-panel{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    background: #29202a;
+}
+.offers-panel h2,
+.plans-intro h2,
+.subscriber-benefits h2{
+    margin-bottom: 8px;
+    font-size: 28px;
+}
+.offer-eyebrow,
+.plan-level{
+    color: #e6b875;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+.plans-intro{
+    max-width: 760px;
+    margin: 0 auto 24px;
+    text-align: center;
+}
+.plans-grid{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    align-items: stretch;
+}
+.plan-card{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 26px;
+    border: 1px solid #a58561;
+    border-radius: 14px;
+    background: #29202a;
+}
+.plan-card-featured{
+    border: 3px solid #d6a15d;
+    transform: translateY(-8px);
+}
+.plan-card h3{
+    margin-top: 8px;
+    font-size: 25px;
+}
+.plan-price{
+    margin: 12px 0;
+    font-size: 32px;
+    font-weight: bold;
+}
+.plan-price span{
+    font-size: 16px;
+    font-weight: normal;
+}
+.plan-detail{
+    min-height: 3.2em;
+}
+.plan-card ul{
+    margin: 18px 0 24px;
+    padding-left: 22px;
+}
+.plan-card li{
+    margin-bottom: 8px;
+}
+.plan-button{
+    display: inline-block;
+    margin-top: auto;
+    padding: 10px 16px;
+    border: 2px solid #d6a15d;
+    border-radius: 8px;
+    background: #d6a15d;
+    color: #29202a;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+.plan-button:hover,
+.plan-button:focus-visible{
+    background: #e6b875;
+    transform: translateY(-2px);
+}
+.plan-button:focus-visible{
+    outline: 3px solid white;
+    outline-offset: 3px;
+}
+.offer-button{
+    flex: 0 0 auto;
+    margin-top: 0;
+}
+.plans-note{
+    margin-top: 22px;
+    font-size: 14px;
+}
+.benefit-list{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 18px;
+}
+.benefit-list article{
+    padding: 18px;
+    border-radius: 10px;
+    background: #29202a;
+}
+.benefit-list h3{
+    margin-bottom: 8px;
+    color: #e6b875;
+}
+/*preview*/
+#preview{
+    margin: 30px;
+    background:  #4b2e2071;
+    padding: 20px;
+    color: white;
+    border: solid #a58561;
+    border-radius: 10px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/*forms*/
+#workshop-form{
+    margin: 30px;
+    background-color: #29202a;
+    color: white;
+    padding: 40px;
+    border-radius: 20px;
+}
+#workshop-form h2{
+    margin-bottom: 8px;
+}
+.form-note{
+    margin-bottom: 24px;
+}
+#registration-form{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: left;
+}
+.form-field{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.form-field label{
+    font-weight: bold;
+}
+.form-field input,
+.form-field select{
+    width: 100%;
+    min-height: 46px;
+    padding: 10px 12px;
+    border: 2px solid #a58561;
+    border-radius: 8px;
+    background: white;
+    color: #29202a;
+    font: inherit;
+}
+.form-field input:focus,
+.form-field select:focus{
+    outline: 3px solid #d6a15d;
+    outline-offset: 2px;
+}
+.register-button{
+    grid-column: 1 / -1;
+    justify-self: center;
+    min-width: 160px;
+    padding: 12px 24px;
+    border: 0;
+    border-radius: 8px;
+    background: #d6a15d;
+    color: #29202a;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+.register-button:hover{
+    background: #e6b875;
+    transform: translateY(-2px);
+}
+.register-button:focus-visible{
+    outline: 3px solid white;
+    outline-offset: 3px;
+}
+#form-status{
+    grid-column: 1 / -1;
+    text-align: center;
+}
+#moving-text{
+    overflow: auto;
+    white-space: nowrap;
+    animation:  moveText 10s linear infinite;
+    font-size: 10px;
+    color: white;
+    font-weight: bold;
+}
+@keyframes moveText{
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+/*tablets and smaller divices*/
+@media (max-width: 900px){
+    header{
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    .event-list{
+        grid-template-columns: 1fr;
+    }
+    nav{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    #equipment-items{
+        grid-template-columns: repeat(2, 1fr);
+        margin: 20px;
+    }
+    .equipment{
+        margin: 10px;
+        padding: 25px;
+    }
+    .plans-grid,
+    .benefit-list{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .plan-card-featured{
+        transform: none;
+    }
+}
+
+
+
+/*mobile divices*/
+@media (max-width: 600px){
+    body{
+        font-size: 14px;
+    }
+    #upcoming-events,
+    header{
+        padding: 20px 10px;
+        flex-direction: column;
+    }
+    /*Greetings*/
+    #greetings{
+        text-align: center;
+    }
+    #greetings h3{
+        font-size: 20px;
+    }
+    /*navigation*/
+    nav{
+        width: 100%;
+        flex-direction: column;
+        gap: 5px;
+    }
+    nav a{
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+    #equipment-items{
+        grid-template-columns: 1fr;
+        margin: 15px;
+        padding: 10px;
+    }
+    #workshop-form{
+        margin: 15px;
+        padding: 24px 18px;
+    }
+    #registration-form{
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+    .register-button,
+    #form-status{
+        grid-column: 1;
+    }
+    .equipment{
+        margin: 10px 0;
+        padding: 20px;
+    }
+    #shopping-cart{
+        margin: 15px;
+        padding: 16px;
+    }
+    .offers-panel,
+    .plans-section,
+    .subscriber-benefits{
+        margin: 15px;
+        padding: 20px;
+    }
+    .offers-panel{
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .plans-grid,
+    .benefit-list{
+        grid-template-columns: 1fr;
+    }
+    .plan-card-featured{
+        transform: none;
+    }
+    .plan-detail{
+        min-height: 0;
+    }
+    .cart-table th,
+    .cart-table td{
+        padding: 9px 7px;
+    }
+    .cart-summary{
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+    .cart-note{
+        text-align: left;
+    }
+    .equipment img{
+        width: 100%;
+        height: 200px;
+    }
+
+    #introduction{
+        margin: 15px;
+        padding: 20px;
+    }
+    #introduction h2{
+        font-size: 25px;
+    }
+    
+
+    footer{
+        margin: 10px;
+        text-align: center;
+    }
+}

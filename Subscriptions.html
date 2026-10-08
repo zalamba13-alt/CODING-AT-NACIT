@@ -12,7 +12,10 @@
 
         <!--css document-->
 
-        <link rel="stylesheet" href="7-Bean Botique stylesheet.css">    
+        <link rel="stylesheet" href="7-Bean-Botique-stylesheet.css">    
+        <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+        
     </head>
     <body>
         <header>
@@ -20,32 +23,113 @@
             <!--Contains a greeting slide show-->
 
             <div id="greetings">
-                <h3>Welcome to Bean Botique Subscription Plans</h3>
-                <marquee><p><h5>Discover the finest Coffee Selection, Brewing equipment, and Exclusive workshops and events. Explore our Shopping Cart and Subscription Plan for a Better Coffee Experience.</h5></p></marquee>
+                <h3>Welcome to Bean Botique Offers &amp; Subscriptions</h3>
+                <div id="moving-text">Fresh coffee, thoughtful perks, and a little something special in every delivery.</div>
             </div>
             
             <!--navigation bar-->
 
             <nav>     
-                <a href="1-home_page (2).html">Home</a>
+                <a href="index.html.html">Home</a>
                 <a href="2-Coffee_selection(2).html">Coffee selection</a>   
                 <a href="brewing_equipment.html">Brewing equipment</a>
                 <a href="Workshop_events.html">Workshop and events</a>
-                <a href="Shoping_cart.html">Shoping Cart</a>
+                <a href="Shoping_cart.html">Shopping Cart</a>
             </nav>
         </header>
 
         <!--page title section-->
 
-        <section id="introduction"> 
-            <h2>Subscription Plans</h2>
-            <p>Choose from our flexible subscription plans to enjoy your favorite coffee delivered to your doorstep.</p>
-        </section>
+        <main>
+            <section id="introduction" data-aos="fade-up">
+                <h2>Special Offers &amp; Coffee Subscriptions</h2>
+                <p>Make every brew count with freshly roasted coffee delivered on your schedule. Pick the plan that fits your coffee routine, and enjoy subscriber-only savings and perks.</p>
+            </section>
+
+            <section class="offers-panel" aria-labelledby="offer-heading" data-aos="fade-up">
+                <div>
+                    <p class="offer-eyebrow">A little welcome treat</p>
+                    <h2 id="offer-heading">Save 15% on your first subscription delivery</h2>
+                    <p>Choose any plan to get 15% off your first box. No code needed. Subscriber discounts apply to coffee only and cannot be combined with other offers.</p>
+                </div>
+                <a class="plan-button offer-button" href="#subscription-plans">Explore plans</a>
+            </section>
+
+            <section id="subscription-plans" class="plans-section" aria-labelledby="plans-heading">
+                <div class="plans-intro">
+                    <h2 id="plans-heading">Choose your coffee rhythm</h2>
+                    <p>All plans include freshly roasted coffee, flexible delivery frequency, and the option to skip or cancel before your next renewal.</p>
+                </div>
+                <div class="plans-grid">
+                    <article class="plan-card" data-aos="fade-up">
+                        <p class="plan-level">The daily favorite</p>
+                        <h3>Daily Drip</h3>
+                        <p class="plan-price">$18 <span>/ delivery</span></p>
+                        <p class="plan-detail">One 12 oz bag per delivery. Choose every 2 weeks or monthly.</p>
+                        <ul>
+                            <li>Choose a house or seasonal roast</li>
+                            <li>Free standard delivery</li>
+                            <li>5% off additional coffee orders</li>
+                        </ul>
+                        <a class="plan-button" href="2-Coffee_selection(2).html">Browse coffee</a>
+                    </article>
+
+                    <article class="plan-card plan-card-featured" data-aos="fade-up" data-aos-delay="100">
+                        <p class="plan-level">Most popular</p>
+                        <h3>Two-Cup Club</h3>
+                        <p class="plan-price">$32 <span>/ delivery</span></p>
+                        <p class="plan-detail">Two 12 oz bags per delivery. Choose every 2 weeks or monthly.</p>
+                        <ul>
+                            <li>Mix and match two coffee selections</li>
+                            <li>Free standard delivery</li>
+                            <li>10% off additional coffee orders</li>
+                            <li>Early access to limited roasts</li>
+                        </ul>
+                        <a class="plan-button" href="2-Coffee_selection(2).html">Browse coffee</a>
+                    </article>
+
+                    <article class="plan-card" data-aos="fade-up" data-aos-delay="200">
+                        <p class="plan-level">For the coffee explorer</p>
+                        <h3>Roaster's Reserve</h3>
+                        <p class="plan-price">$46 <span>/ delivery</span></p>
+                        <p class="plan-detail">Three 12 oz bags per delivery. Choose every 2 weeks or monthly.</p>
+                        <ul>
+                            <li>Rotating premium and single-origin coffees</li>
+                            <li>Free priority delivery</li>
+                            <li>15% off additional coffee orders</li>
+                            <li>Free tasting notes with every box</li>
+                        </ul>
+                        <a class="plan-button" href="2-Coffee_selection(2).html">Browse coffee</a>
+                    </article>
+                </div>
+                <p class="plans-note">Plan prices are sample prices per delivery. Subscriptions renew at the selected frequency; manage or cancel before the next renewal. Subscription checkout is not available on this demo page.</p>
+            </section>
+
+            <section class="subscriber-benefits" aria-labelledby="benefits-heading" data-aos="fade-up">
+                <h2 id="benefits-heading">Good coffee, with more benefits</h2>
+                <div class="benefit-list">
+                    <article>
+                        <h3>Roasted fresh</h3>
+                        <p>Your coffee is prepared for your delivery, so every cup starts with fresh beans.</p>
+                    </article>
+                    <article>
+                        <h3>Your schedule</h3>
+                        <p>Choose a two-week or monthly delivery cadence, and skip or cancel whenever your plans change.</p>
+                    </article>
+                    <article>
+                        <h3>Subscriber savings</h3>
+                        <p>Enjoy the discount attached to your plan on additional coffee purchases.</p>
+                    </article>
+                </div>
+            </section>
+        </main>
 
         <!--footer section-->
         
         <footer>
             <p>&copy; 2026 Bean Botique, All rights reserved.</p>
         </footer>
+        <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+        <script src="site-animations.js"></script>
     </body>
 </html>

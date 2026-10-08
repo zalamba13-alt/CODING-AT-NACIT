@@ -12,8 +12,22 @@
 
         <!--css document-->
 
-        <link rel="stylesheet" href="7-Bean Botique stylesheet.css">
+        <link rel="stylesheet" href="7-Bean-Botique-stylesheet.css">
+        
+        <!--AOS-->
+        <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+        <!--Flatpickr-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr@4.6.13/dist/flatpickr.min.css">
+
+        <!--font awesome-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+      
+       
     </head>
+
+    <!--body -->
+    
     <body>
 
         <!--header-->
@@ -23,97 +37,103 @@
             <!--Contains a greeting slide show-->
 
             <div id="greetings">
-                <h3>Welcome to Bean Botique Workshop and Events</h3>
-                <marquee>
-                    <p>
-                        <h5>
-                            Discover the finest Coffee Selection, Brewing equipment, and Exclusive workshops and events. Explore our Shopping Cart and Subscription Plan for a Better Coffee Experience.
-                        </h5>
-                    </p>
-                </marquee>
+
+                <!--Greeting text-->
+
+                <div id="greeting-text">
+                    <h1>Workshop and Events!</h1>
+                </div>     
+              
+                <!--Moving text-->
+
+               <div id="moving-text">
+                    Discover our different types of coffee.     
+               </div>
             </div>
             
             <!--navigation bar-->
 
             <nav>
-                <a href="1-home_page (2).html">Home page</a>       
+                <a href="index.html.html">Home page</a>       
                 <a href="2-Coffee_selection(2).html">Coffee selection page </a>
                 <a href="brewing_equipment.html">Brewing equipment </a>
-                <a href="Shopping_cart.html">Shopping Cart page</a>
+                <a href="Shoping_cart.html">Shopping Cart page</a>
                 <a href="Subscriptions.html">Subscription page</a>
             </nav>
+            
         </header>
-
-        <!--page title section-->
-
-        <section id="introduction">
-            <h2>Workshops and Events</h2>
-            <p>Join our exclusive workshops and events to enhance your coffee knowledge and skills.</p>
-        </section>
-       
-      
+ 
         <!--preview of the workshop and events-->
 
-        <section id="preview">
+        <section id="preview" data-aos="fade-up">
             <h3>Preview of Workshops and Events</h3>
             <p>Select from a wide variety of workshops and events to enhance your coffee knowledge and skills.</p>
+        </section>
+        <!--Form section-->
+
+        <section id="workshop-form" data-aos="fade-up" aria-labelledby="registration-title">
+
+            <!--form-->
+
+            <h2 id="registration-title">Register for a Workshop</h2>
+            <p class="form-note">Complete the form to prepare your registration. This demo does not send or store your information.</p>
+
+            <form id="registration-form">
+                <div class="form-field">
+                    <label for="name">Full name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" autocomplete="name" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" autocomplete="email" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="event">Select event</label>
+                    <select id="event" name="event" required>
+                        <option value="" disabled selected>-- Select an event --</option>
+                        <option value="Coffee Brewing Workshop">Coffee Brewing Workshop</option>
+                        <option value="Latte Art Workshop">Latte Art Workshop</option>
+                        <option value="Coffee Tasting">Coffee Tasting</option>
+                    </select>
+                </div>
+
+                <div class="form-field">
+                    <label for="event-date">Preferred date</label>
+                    <input type="date" id="event-date" name="event-date" required>
+                </div>
+
+                <button type="submit" class="register-button">Register</button>
+                <p id="form-status" role="status" aria-live="polite"></p>
+
+            </form>
+
         </section>
 
         <!-- Images of workshop examples-->
 
         <section id="equipment-items">
 
-            <div class="equipment">  
+            <div class="equipment" data-aos="fade-up">  
                 <h3>Coffee Tasting Workshop</h3>
                 <p>Experience the art of coffee tasting and learn to identify different flavors and aromas.</p>  
-                <img src="screen 13.jpg">
+                <img src="screen-13.jpg" alt="Coffee Tasting Workshop">
             </div>
 
-            <div class="equipment">  
+            <div class="equipment" data-aos="fade-up" data-aos-delay="100">  
                 <h3>Brewing Techniques Seminar</h3>
                 <p>Discover various brewing methods and techniques to make the perfect cup of coffee.</p>  
-                <img src="screen 14.jpg">
+                <img src="screen-14.jpg" alt="Brewing Techniques Seminar">
             </div>
 
-            <div class="equipment">  
+            <div class="equipment" data-aos="fade-up" data-aos-delay="200">  
                 <h3>Latte Art Class</h3>
                 <p>Learn the skills of creating beautiful latte art designs with our expert baristas.</p>  
-                <img src="screen 15.jpg">
+                <img src="screen-15.jpg" alt="Latte Art Class">
             </div>
 
         </section>  
-        <!--Form section-->
-
-        <section>
-
-            <!--form-->
-
-            <form id="workshop-form">
-                <div id="form-field">
-                    <label> Enter Your Full Name: </label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div id="form-field">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div id="form-field">
-                    <label for="event">Select Event:</label>
-                    <select id="event" name="event" required>
-                        <option value="">Choose an event</option>
-                        <option value="coffee-tasting">Coffee Tasting Workshop</option>
-                        <option value="brewing-techniques">Brewing Techniques Seminar</option>
-                        <option value="latte-art">Latte Art Class</option>
-                    </select>
-                </div>
-                
-                <div id="submit">
-                    <button type="submit">Register now</button>
-                </div>
-
-            </form>
-
-        </section>
 
 
         <!--footer-->
@@ -121,5 +141,12 @@
         <footer>
             <p>&copy; 2026 Bean Botique, All rights reserved.</p>
         </footer>
+
+        <!-- AOS, Flatpickr, and SweetAlert2 are progressive enhancements; native form behavior remains available. -->
+        <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+        <script src="site-animations.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr@4.6.13/dist/flatpickr.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="workshop-events.js"></script>
     </body>
-</html> 
+</html>
