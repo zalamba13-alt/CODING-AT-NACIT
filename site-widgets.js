@@ -1,6 +1,56 @@
 const mapSearchForm = document.querySelector("#map-search-form");
 const shopMap = document.querySelector("#shop-map");
 const mapOpenLink = document.querySelector("#map-open-link");
+const pageSearchInput = document.querySelector("#page-search-input");
+const clearPageSearch = document.querySelector("#clear-page-search");
+const pageSearchStatus = document.querySelector("#page-search-status");
+
+if (pageSearchInput && clearPageSearch && pageSearchStatus) {
+    const searchableItems = Array.from(document.querySelectorAll(
+        "#introduction, #equipment-items .equipment, .home-widget"
+    ));
+    const equipmentSection = document.querySelector("#equipment-items");
+    const widgetsSection = document.querySelector(".home-widgets");
+
+    pageSearchInput.addEventListener("input", () => {
+        const query = pageSearchInput.value.trim().toLocaleLowerCase();
+        let matchCount = 0;
+
+        searchableItems.forEach((item) => {
+            const matches = !query || item.textContent.toLocaleLowerCase().includes(query);
+            item.classList.remove("search-result-enter");
+            item.hidden = !matches;
+
+            if (matches) {
+                matchCount += 1;
+                if (query) {
+                    requestAnimationFrame(() => item.classList.add("search-result-enter"));
+                }
+            }
+        });
+
+        if (equipmentSection) {
+            equipmentSection.hidden = !searchableItems.some((item) =>
+                item.matches("#equipment-items .equipment") && !item.hidden
+            );
+        }
+        if (widgetsSection) {
+            widgetsSection.hidden = !searchableItems.some((item) =>
+                item.matches(".home-widget") && !item.hidden
+            );
+        }
+
+        pageSearchStatus.textContent = query
+            ? `${matchCount} ${matchCount === 1 ? "match" : "matches"} for “${pageSearchInput.value.trim()}”.`
+            : "Showing all page content.";
+    });
+
+    clearPageSearch.addEventListener("click", () => {
+        pageSearchInput.value = "";
+        pageSearchInput.dispatchEvent(new Event("input", { bubbles: true }));
+        pageSearchInput.focus();
+    });
+}
 
 function updateMap(query) {
     const embedUrl = new URL("https://www.google.com/maps");

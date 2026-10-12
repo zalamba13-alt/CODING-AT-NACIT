@@ -90,6 +90,74 @@ nav a:active {
     font-size: 32px;
     margin-bottom: 10px;
 }
+.page-search{
+    max-width: 900px;
+    margin: 0 auto 24px;
+    padding: 0 30px;
+}
+.page-search label{
+    display: block;
+    margin-bottom: 8px;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+.page-search-controls{
+    display: flex;
+    gap: 10px;
+}
+.page-search input{
+    width: 100%;
+    min-width: 0;
+    min-height: 48px;
+    padding: 10px 14px;
+    border: 2px solid #a58561;
+    border-radius: 6px;
+    background: white;
+    color: #29202a;
+    font: inherit;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.page-search input:focus-visible{
+    border-color: #4b2e20;
+    outline: 3px solid white;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 5px #4b2e20;
+}
+.page-search-controls .widget-button{
+    flex: 0 0 auto;
+}
+#page-search-status{
+    min-height: 1.6em;
+    margin-top: 6px;
+    color: white;
+}
+#introduction[hidden],
+#equipment-items[hidden],
+.equipment[hidden],
+.home-widgets[hidden],
+.home-widget[hidden]{
+    display: none !important;
+}
+.search-result-enter{
+    animation: searchResultEnter 360ms ease-out both;
+}
+@keyframes searchResultEnter{
+    from{
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@media (prefers-reduced-motion: reduce){
+    .search-result-enter{
+        animation: none;
+    }
+}
 
 /*general images*/
 
@@ -752,6 +820,12 @@ img:active{
     #introduction{
         margin: 15px;
         padding: 20px;
+    }
+    .page-search{
+        padding: 0 15px;
+    }
+    .page-search-controls{
+        gap: 6px;
     }
     #introduction h2{
         font-size: 25px;
