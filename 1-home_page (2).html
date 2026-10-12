@@ -152,11 +152,52 @@
             </div>
         </section>
 
+        <section class="home-widgets" aria-label="Community, locations, and privacy">
+            <article class="home-widget community-widget" aria-labelledby="community-heading">
+                <p class="widget-kicker">Around the table</p>
+                <h2 id="community-heading">Coffee brings us together</h2>
+                <p>Find brew ideas from coffee fans, or share what you are making today.</p>
+                <div class="community-links">
+                    <a href="https://www.instagram.com/explore/tags/coffeetime/" target="_blank" rel="noopener noreferrer">Explore coffee on Instagram</a>
+                    <a href="https://www.tiktok.com/tag/coffeetime" target="_blank" rel="noopener noreferrer">Explore coffee on TikTok</a>
+                </div>
+                <button class="widget-button" id="share-brew" type="button">Share Bean Botique</button>
+                <p class="widget-status" id="share-status" role="status" aria-live="polite"></p>
+            </article>
+
+            <article class="home-widget map-widget" aria-labelledby="map-heading">
+                <p class="widget-kicker">Find your way</p>
+                <h2 id="map-heading">Explore nearby coffee</h2>
+                <form id="map-search-form" class="map-search-form">
+                    <label for="map-query">City, address, or event venue</label>
+                    <div class="map-search-controls">
+                        <input id="map-query" name="query" type="search" value="Bean Botique coffee shop" required>
+                        <button class="widget-button" type="submit">Search map</button>
+                    </div>
+                </form>
+                <iframe id="shop-map" title="Map search for Bean Botique and coffee events" src="https://www.google.com/maps?q=Bean+Botique+coffee+shop&amp;output=embed" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                <a class="map-open-link" id="map-open-link" href="https://www.google.com/maps/search/?api=1&amp;query=Bean%20Botique%20coffee%20shop" target="_blank" rel="noopener noreferrer">Open map in Google Maps</a>
+            </article>
+
+            <article class="home-widget privacy-widget" aria-labelledby="privacy-heading">
+                <p class="widget-kicker">Your data, your choice</p>
+                <h2 id="privacy-heading">Privacy controls</h2>
+                <p>This demo does not send personal details to a server. Basket contents stay in this browser.</p>
+                <label class="privacy-toggle" for="remember-basket">
+                    <input id="remember-basket" type="checkbox" checked>
+                    <span>Remember my basket on this device</span>
+                </label>
+                <p class="privacy-note">Turn this off to keep the basket only for this browser session and remove its saved copy.</p>
+                <p class="connection-status" id="connection-status" role="status" aria-live="polite"></p>
+            </article>
+        </section>
+
         <!--footer part-->
 
         <footer>
             <p>&copy; 2026 Bean Botique, All rights reserved.</p>
         </footer>
+        <script src="site-widgets.js"></script>
 
     </body>
 </html>

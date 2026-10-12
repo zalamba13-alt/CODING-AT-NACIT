@@ -1,8 +1,12 @@
 const CART_STORAGE_KEY = "beanBoutiqueCart";
+const CART_SESSION_KEY = "beanBoutiqueSessionCart";
+const REMEMBER_CART_KEY = "beanBoutiqueRememberCart";
 const MAX_QUANTITY = 99;
 
 function readCart() {
-    const storedCart = localStorage.getItem(CART_STORAGE_KEY);
+    const storage = localStorage.getItem(REMEMBER_CART_KEY) === "false" ? sessionStorage : localStorage;
+    const storageKey = storage === sessionStorage ? CART_SESSION_KEY : CART_STORAGE_KEY;
+    const storedCart = storage.getItem(storageKey);
     if (!storedCart) {
         return [];
     }
@@ -30,7 +34,13 @@ function readCart() {
 }
 
 function saveCart(cart) {
-    localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cart));
+    if (localStorage.getItem(REMEMBER_CART_KEY) === "false") {
+        sessionStorage.setItem(CART_SESSION_KEY, JSON.stringify(cart));
+        localStorage.removeItem(CART_STORAGE_KEY);
+    } else {
+        localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cart));
+        sessionStorage.removeItem(CART_SESSION_KEY);
+    }
 }
 
 function formatPrice(price) {
