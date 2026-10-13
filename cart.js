@@ -112,7 +112,7 @@ function renderCart() {
     if (cart.length === 0) {
         showCartMessage("Your basket is empty. Add products from the coffee or equipment pages.");
     } else {
-        showCartMessage(`${cart.reduce((sum, item) => sum + item.quantity, 0)} item(s) in your basket.`);
+        showCartMessage(`K{cart.reduce((sum, item) => sum + item.quantity, 0)} item(s) in your basket.`);
     }
 }
 
