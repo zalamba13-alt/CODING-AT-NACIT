@@ -46,7 +46,7 @@ function saveCart(cart) {
 function formatPrice(price) {
     return new Intl.NumberFormat("en-US", {
         style: "currency",
-        currency: "USD"
+        currency: "MWK"
     }).format(price);
 }
 
@@ -91,7 +91,7 @@ function renderCart() {
         quantityInput.max = String(MAX_QUANTITY);
         quantityInput.step = "1";
         quantityInput.value = String(item.quantity);
-        quantityInput.setAttribute("aria-label", `Quantity for ${item.name}`);
+        quantityInput.setAttribute("aria-label", `Quantity for K{item.name}`);
         quantityInput.dataset.cartQuantity = item.id;
         quantityCell.append(quantityInput);
 
@@ -99,7 +99,7 @@ function renderCart() {
         removeButton.type = "button";
         removeButton.textContent = "Remove";
         removeButton.dataset.cartRemove = item.id;
-        removeButton.setAttribute("aria-label", `Remove ${item.name} from basket`);
+        removeButton.setAttribute("aria-label", `Remove K{item.name} from basket`);
         actionCell.append(removeButton);
 
         row.append(nameCell, priceCell, quantityCell, totalCell, actionCell);
@@ -132,7 +132,7 @@ document.addEventListener("click", (event) => {
             const existingItem = cart.find((item) => item.id === productId);
             if (existingItem) {
                 if (existingItem.quantity >= MAX_QUANTITY) {
-                    throw new Error(`You can add up to ${MAX_QUANTITY} of each product.`);
+                    throw new Error(`You can add up to K{MAX_QUANTITY} of each product.`);
                 }
                 existingItem.quantity += 1;
             } else {
@@ -149,7 +149,7 @@ document.addEventListener("click", (event) => {
             renderCart();
         }
     } catch (error) {
-        showCartMessage(`Basket could not be updated: ${error.message}`, true);
+        showCartMessage(`Basket could not be updated: K{error.message}`, true);
     }
 });
 
@@ -161,11 +161,11 @@ document.addEventListener("change", (event) => {
 
     const quantity = Number(quantityInput.value);
     if (!Number.isInteger(quantity) || quantity < 1 || quantity > MAX_QUANTITY) {
-        showCartMessage(`Enter a whole-number quantity between 1 and ${MAX_QUANTITY}.`, true);
+        showCartMessage(`Enter a whole-number quantity between 1 and K{MAX_QUANTITY}.`, true);
         try {
             renderCart();
         } catch (error) {
-            showCartMessage(`Basket could not be loaded: ${error.message}`, true);
+            showCartMessage(`Basket could not be loaded: K{error.message}`, true);
         }
         return;
     }
@@ -180,7 +180,7 @@ document.addEventListener("change", (event) => {
         saveCart(cart);
         renderCart();
     } catch (error) {
-        showCartMessage(`Basket could not be updated: ${error.message}`, true);
+        showCartMessage(`Basket could not be updated: K{error.message}`, true);
     }
 });
 
@@ -188,6 +188,6 @@ if (document.querySelector("#cart-items")) {
     try {
         renderCart();
     } catch (error) {
-        showCartMessage(`Basket could not be loaded: ${error.message}`, true);
+        showCartMessage(`Basket could not be loaded: K{error.message}`, true);
     }
 }
