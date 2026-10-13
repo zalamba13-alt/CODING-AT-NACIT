@@ -139,7 +139,7 @@ document.addEventListener("click", (event) => {
                 cart.push({ id: productId, name: productName, price, quantity: 1 });
             }
             saveCart(cart);
-            showCartMessage(`${productName} added to your basket.`);
+            showCartMessage(`K{productName} added to your basket.`);
         } else if (removeButton) {
             const updatedCart = readCart().filter((item) => item.id !== removeButton.dataset.cartRemove);
             saveCart(updatedCart);
